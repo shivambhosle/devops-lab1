@@ -1,11 +1,9 @@
-def add(a, b):
-    return a + b
+from app import add, greet
 
 
-def greet(name):
-    return f"Hello, {name}!"
+def test_add():
+    assert add(2, 3) == 5
 
 
-if __name__ == "__main__":
-    print(add(2, 3))
-    print(greet("World"))
+def test_greet():
+    assert greet("World") == "Hello, World!"
